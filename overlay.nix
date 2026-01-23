@@ -1,4 +1,4 @@
 { openprojectStatePath ? "/tmp/openproject" }:
 final: prev: {
-  openproject = final.callPackage ./ruby { inherit openprojectStatePath; };
+  openproject = final.callPackage ./package.nix { inherit openprojectStatePath; };
 }
