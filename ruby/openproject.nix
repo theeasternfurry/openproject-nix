@@ -4,7 +4,7 @@
 , runCommand
 , bundlerEnv
 , fetchNpmDeps
-, nodejs
+, nodejs_22
 , npmHooks
 , ruby_3_4
 , rust
@@ -27,6 +27,7 @@ let
   ## check upstream .ruby-version when updating,
   ## because that's overridden in the recipe (to override minor version mismatch)
   opf-ruby = ruby_3_4;
+  nodejs = nodejs_22;
 
   rustPackages = rust.packages.stable;
   rustPlatform = rustPackages.rustPlatform;
