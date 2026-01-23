@@ -36,7 +36,7 @@
             # PATH here
             devshell.packages = with pkgs; [
               bundix
-              ruby_3_3
+              ruby_3_4
             ];
             commands = [
               {
