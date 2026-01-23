@@ -99,6 +99,7 @@ let
     cd $out
     patchPhase
     echo "${opf-ruby.version}" > .ruby-version
+    sed -i "s/^   ruby .*\$/   ruby ${opf-ruby.version}/" Gemfile.lock
   '';
 
 in
