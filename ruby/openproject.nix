@@ -20,10 +20,10 @@
 }:
 
 let
-  version = "16.6.2";
-  opfHash = "sha256-vsFILk1qsTxZlGQxxrKzkroWjYSiHe4uQqbrxRzAgLs=";
-  commonmarkerCargoDepsHash = "sha256-5ZEkaAFsseX/41UOuyfXK2MUG6TL1SJpqPojD5fN80s=";
-  npmDepsHash = "sha256-OOfG8ZgkCmgwDFH33Qiqarcksd/sJdU+pxjiB8RToaA=";
+  version = "17.0.1";
+  opfHash = "sha256-kNbB4kIY+2fjd978PsQdWu/huqs93KyBl9668kHbGas=";
+  commonmarkerCargoDepsHash = "sha256-Osj+WzyTQlcMtgkqvhRquLkVMK4z2HYafr4t42qsxe8=";
+  npmDepsHash = "sha256-kCRmd/dgY2PbnyIbpsfyYgAJdjx7sXTqmRlUxsnClUc=";
   ## check upstream .ruby-version when updating,
   ## because that's overridden in the recipe (to override minor version mismatch)
   opf-ruby = ruby_3_4;
