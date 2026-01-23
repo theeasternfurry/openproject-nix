@@ -124,7 +124,6 @@ in
 
     buildPhase = ''
       export BUNDLE_WITHOUT=development:test
-      # export BUNDLE_DEPLOYMENT=true ## ignores git deps
 
       ## see <openproject/docker/prod/setup/precompile-assets.sh>
       export RAILS_ENV=production
@@ -132,19 +131,14 @@ in
       export SECRET_KEY_BASE=1
 
       bundle exec rails openproject:plugins:register_frontend assets:precompile
-      # bundle exec rake assets:prepare_op
-      # bundle exec rake openproject:plugins:register_frontend
-      # bundle exec rake assets:rebuild_manifest
+
       rm -r docker files frontend log nix packaging tmp
       ln -s ${openprojectStatePath}/tmp tmp
       ln -s ${openprojectStatePath}/files files
     '';
 
     installPhase = ''
-      set -x
       cp -R . $out
-      # makeWrapper ${rubyEnv.wrappedRuby}/bin/ruby $out/bin/rdm-mailhandler.rb --add-flags $out/share/redmine/extra/mail_handler/rdm-mailhandler.rb
-      set +x
     '';
 
     meta = with lib; {
